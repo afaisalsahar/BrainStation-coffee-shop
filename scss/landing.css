@@ -1,0 +1,407 @@
+/* ## Colors ## */
+/* ## Reset ## */
+*,
+*:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open sans";
+  font-weight: 400;
+  color: #393939;
+}
+
+/* ## Default Element Styles ## */
+h1, h2, h3 {
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 3.75rem;
+}
+
+h2 {
+  font-size: 2.063rem;
+}
+
+p {
+  font-size: 1.125rem;
+}
+
+a, button {
+  font-size: 1.313rem;
+}
+
+a {
+  color: #393939;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: #5BACC3;
+}
+
+/* ## Website Container ## */
+.container {
+  width: 1280px;
+  margin: auto;
+}
+
+/* ## Icon Defaults ## */
+.topbar__logo-icon,
+.contact-card__social-icon,
+.promotion-card__icon {
+  min-width: 3.125rem;
+  max-width: 7.5rem;
+}
+
+/* ## Center Text Alignment ## */
+.products-card,
+.promotion-card,
+.promotion-card__discount,
+.menu-navigation__main-title,
+.menu-navigation__items,
+.menu-card {
+  text-align: center;
+}
+
+/* ## Topbar - Main Menu ## */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFF0ED;
+  padding: 1rem 2rem;
+}
+
+.topbar__logo-name {
+  display: inline;
+  font-size: 2.5em;
+}
+
+.topbar__logo-link:hover, .topbar__logo-link:active {
+  color: #393939;
+}
+
+.topbar__main-navigation-link--attention {
+  color: #5BACC3;
+}
+
+.topbar__main-navigation {
+  margin-left: 2rem;
+}
+
+.topbar__main-navigation-items {
+  display: flex;
+  list-style: none;
+}
+
+.topbar__main-navigation-item--spacer {
+  margin: 0 2rem;
+}
+
+/* ## Action Buttons ## */
+.hero__action,
+.products-card__action,
+.promotion-card__action {
+  text-align: center;
+  display: block;
+  position: relative;
+  min-width: 180px;
+  max-width: 220px;
+  padding: 1.25rem 0;
+  background: #5BACC3;
+  color: #FFFFFF;
+}
+
+.hero__action:before,
+.products-card__action:before,
+.promotion-card__action:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #393939;
+}
+
+.hero__action:hover,
+.hero__action:active,
+.products-card__action:hover,
+.products-card__action:active,
+.promotion-card__action:hover,
+.promotion-card__action:active {
+  color: #FFFFFF;
+}
+
+.products-card__action:active:before,
+.promotion-card__action:active:before,
+.hero__action:active:before {
+  bottom: 0;
+  right: 0;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes flashing {
+  0% {
+    background-color: #393939;
+  }
+  50% {
+    background-color: #5BACC3;
+  }
+  100% {
+    background-color: #393939;
+  }
+}
+@keyframes flashing {
+  0% {
+    background-color: #393939;
+  }
+  50% {
+    background-color: #5BACC3;
+  }
+  100% {
+    background-color: #393939;
+  }
+}
+/* ## Hero ## */
+.hero {
+  background-color: #FFF0ED;
+  padding: 2rem;
+}
+
+.hero__item {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 500px;
+  padding-top: 100px;
+}
+
+.hero__description {
+  margin: 1rem 0 3rem;
+}
+
+.hero__graphic {
+  width: 100%;
+  max-width: 280px;
+}
+
+/* ## Products Card ## */
+.products-card {
+  padding: 5rem 0 3rem;
+  background-color: #F7F7F7;
+}
+
+.products-card__product {
+  display: inline-block;
+  width: 25%;
+  padding: 2rem 0 0;
+  margin: 7rem 0;
+  background-color: #FFFFFF;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.products-card__product--spacer {
+  margin: 0 5rem;
+}
+
+.products-card__image {
+  height: 100%;
+  max-height: 230px;
+}
+
+.products-card__details {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #FFF0ED;
+  text-align: left;
+  padding: 2rem 0;
+  margin: 2rem 0 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.product-card__quantity {
+  color: #909090;
+}
+
+.products-card__price {
+  display: block;
+  color: #5BACC3;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.products-card__action {
+  margin: auto;
+}
+
+/* ## Promotion Card ## */
+.promotion-card {
+  padding: 5rem 0;
+}
+
+.container--promotion-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.promotion-card__details {
+  width: 35%;
+  text-align: left;
+}
+
+.promotion-card__description {
+  margin: 2rem 0 1.2rem;
+}
+
+.icon-pack {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.promotion-card__icon {
+  width: 100%;
+  max-width: 50px;
+}
+
+.promotion-card__graphic {
+  position: relative;
+  background-image: url("../assets/coldbrewbackground.png");
+  background-size: 100%;
+  min-width: 400px;
+  max-width: 500px;
+  min-height: 400px;
+  max-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promotion-card__graphic:hover > .promotion-card__imagery {
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.promotion-card__graphic:before {
+  content: "";
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 100%;
+  height: 100%;
+  border: 5px solid #5BACC3;
+}
+
+.promotion-card__imagery {
+  width: 100%;
+  max-width: 120px;
+  transition: transform 2s;
+}
+
+.promotion-card__discount {
+  -webkit-animation-name: flashing;
+          animation-name: flashing;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  flex: 0 0 100%;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  max-width: 90%;
+  margin: 10rem auto auto;
+  background-color: #393939;
+  color: #FFFFFF;
+  padding: 1.25rem 0;
+  font-size: 2.813rem;
+}
+
+/* ## Contact Card ## */
+.contact-card {
+  overflow: hidden;
+  position: relative;
+  background-color: #FFF0ED;
+  padding: 4rem 14rem;
+}
+
+.contact-card:before, .contact-card:after {
+  content: "";
+  position: absolute;
+  min-width: 60px;
+  max-width: 120px;
+  min-height: 60px;
+  max-height: 120px;
+  width: 120%;
+  height: 100%;
+  opacity: 25%;
+  background: url("../assets/coffee-beans-logo-and-footer.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.contact-card:before {
+  top: 20px;
+  left: -40px;
+}
+
+.contact-card:after {
+  bottom: 20px;
+  right: -40px;
+}
+
+.contact-card__address, .contact-card__working-hours, .contact-card__social {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.contact-card__title {
+  margin-bottom: 1rem;
+}
+
+.contact-card__working-days {
+  font-weight: 700;
+}/*# sourceMappingURL=landing.css.map */

@@ -1,0 +1,251 @@
+/* ## Colors ## */
+/* ## Reset ## */
+*,
+*:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open sans";
+  font-weight: 400;
+  color: #393939;
+}
+
+/* ## Default Element Styles ## */
+h1, h2, h3 {
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 3.75rem;
+}
+
+h2 {
+  font-size: 2.063rem;
+}
+
+p {
+  font-size: 1.125rem;
+}
+
+a, button {
+  font-size: 1.313rem;
+}
+
+a {
+  color: #393939;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: #5BACC3;
+}
+
+/* ## Website Container ## */
+.container {
+  width: 1280px;
+  margin: auto;
+}
+
+/* ## Icon Defaults ## */
+.topbar__logo-icon,
+.contact-card__social-icon,
+.promotion-card__icon {
+  min-width: 3.125rem;
+  max-width: 7.5rem;
+}
+
+/* ## Center Text Alignment ## */
+.products-card,
+.promotion-card,
+.promotion-card__discount,
+.menu-navigation__main-title,
+.menu-navigation__items,
+.menu-card {
+  text-align: center;
+}
+
+/* ## Topbar - Main Menu ## */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFF0ED;
+  padding: 1rem 2rem;
+}
+
+.topbar__logo-name {
+  display: inline;
+  font-size: 2.5em;
+}
+
+.topbar__logo-link:hover, .topbar__logo-link:active {
+  color: #393939;
+}
+
+.topbar__main-navigation-link--attention {
+  color: #5BACC3;
+}
+
+.topbar__main-navigation {
+  margin-left: 2rem;
+}
+
+.topbar__main-navigation-items {
+  display: flex;
+  list-style: none;
+}
+
+.topbar__main-navigation-item--spacer {
+  margin: 0 2rem;
+}
+
+/* ## Action Buttons ## */
+.hero__action,
+.products-card__action,
+.promotion-card__action {
+  text-align: center;
+  display: block;
+  position: relative;
+  min-width: 180px;
+  max-width: 220px;
+  padding: 1.25rem 0;
+  background: #5BACC3;
+  color: #FFFFFF;
+}
+
+.hero__action:before,
+.products-card__action:before,
+.promotion-card__action:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #393939;
+}
+
+.hero__action:hover,
+.hero__action:active,
+.products-card__action:hover,
+.products-card__action:active,
+.promotion-card__action:hover,
+.promotion-card__action:active {
+  color: #FFFFFF;
+}
+
+.products-card__action:active:before,
+.promotion-card__action:active:before,
+.hero__action:active:before {
+  bottom: 0;
+  right: 0;
+}
+
+/* ## Menu Navigation - Hero ## */
+.menu-navigation {
+  height: 75vh;
+  margin-bottom: 8vh;
+}
+
+.menu-navigation__hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFFFFF url("../assets/coffee-circle.jpg") no-repeat center;
+  background-size: 100%;
+  height: 100%;
+}
+
+.menu-navigation__main-title {
+  position: relative;
+  min-width: 280px;
+  max-width: 300px;
+  min-height: 180px;
+  max-height: 200px;
+  background-color: #393939;
+  color: #F7F7F7;
+  padding: 4rem 0;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.menu-navigation__main-title:before {
+  content: "";
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 100%;
+  height: 100%;
+  border: 5px solid #5BACC3;
+}
+
+.menu-navigation__items {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  background-color: #393939;
+  list-style: none;
+}
+
+.menu-navigation__item {
+  text-transform: uppercase;
+  border-right: 0.2rem solid #5BACC3;
+  padding-right: 1rem;
+  margin-right: 0.8rem;
+}
+
+.menu-navigation__item:last-child {
+  border: none;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.menu-navigation__link,
+.menu-navigation__link:hover,
+.menu-navigation__link:active {
+  color: #F7F7F7;
+}
+
+/* ## Menu card items ## */
+.menu-card {
+  padding: 2em 0;
+  text-align: center;
+  background: #FFF0ED;
+}
+
+.menu-card--cold-drinks {
+  background-color: #F7F7F7;
+}
+
+.menu-card__main-title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.menu-card__item {
+  width: 35%;
+  margin: auto;
+  padding: 1rem 0;
+}
+
+.menu-card__title {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+.menu-card__description {
+  font-style: italic;
+}
+
+.menu-card__price {
+  display: block;
+  padding-top: 1rem;
+  color: #5BACC3;
+  font-weight: bold;
+}/*# sourceMappingURL=menu.css.map */

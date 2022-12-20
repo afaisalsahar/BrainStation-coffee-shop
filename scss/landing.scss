@@ -1,0 +1,194 @@
+@use './partials/global' as *;
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+};
+
+@keyframes flashing {
+    0% {
+        background-color: $primary-color;
+    }
+    50% {
+        background-color: $highlight-color;
+    }
+    100% {
+        background-color: $primary-color;
+    }
+}
+
+/* ## Hero ## */
+.hero {
+    background-color: $spotlight-color;
+    padding: 2rem;
+}
+.hero__item {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 500px;
+    padding-top: 100px;
+}
+.hero__description { margin: 1rem 0 3rem; }
+.hero__graphic { 
+    width: 100%;
+    max-width: 280px;
+}
+
+/* ## Products Card ## */
+.products-card {
+    padding: 5rem 0 3rem;
+    background-color: $light-alternate-color;
+}
+.products-card__product {
+    display: inline-block;
+    width: 25%;
+    padding: 2rem 0 0;
+    margin: 7rem 0;
+    background-color: $secondary-color;
+    box-shadow: 0 5px 5px rgba(0,0,0,.1);
+
+    @include border-radius(.50rem, .50rem);
+}
+.products-card__product--spacer { margin: 0 5rem; }
+.products-card__image {
+    height: 100%;
+    max-height: 230px;
+}
+.products-card__details {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $spotlight-color;
+    text-align: left;
+    padding: 2rem 0;
+    margin: 2rem 0 0;
+
+    @include border-radius(0, .50rem);
+}
+.product-card__quantity {
+    color: $alternate-color;
+}
+.products-card__price {
+    display: block;
+    color: $highlight-color;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.products-card__action {
+    margin: auto;
+}
+
+/* ## Promotion Card ## */
+.promotion-card { padding: 5rem 0; }
+.container--promotion-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.promotion-card__details {
+    width: 35%;
+    text-align: left;
+}
+.promotion-card__description {
+    margin: 2rem 0 1.2rem;
+}
+.icon-pack {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.promotion-card__icon {
+    width: 100%;
+    max-width: 50px;
+}
+.promotion-card__graphic {
+    position: relative;
+    background-image: url("../assets/coldbrewbackground.png");
+    background-size: 100%;
+    min-width: 400px;
+    max-width: 500px;
+    min-height: 400px;
+    max-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.promotion-card__graphic:hover > .promotion-card__imagery {
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+.promotion-card__graphic:before {
+    content: "";
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 100%;
+    height: 100%;
+    border: 5px solid $highlight-color;
+}
+.promotion-card__imagery {
+    width: 100%;
+    max-width: 120px;
+    transition: transform 2s;
+}
+.promotion-card__discount {
+    animation-name: flashing;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+
+    flex: 0 0 100%;
+    min-width: fit-content;
+    max-width: 90%;
+    margin: 10rem auto auto;
+    background-color: $primary-color;
+    color: $secondary-color;
+    padding: 1.25rem 0;
+    font-size: 2.813rem;
+}
+
+/* ## Contact Card ## */
+.contact-card {
+    overflow: hidden;
+    position: relative;
+    background-color: $spotlight-color;
+    padding: 4rem 14rem;
+}
+.contact-card:before, .contact-card:after {
+    content: "";
+    position: absolute;
+    min-width: 60px;
+    max-width: 120px;
+    min-height: 60px;
+    max-height: 120px;
+    width: 120%;
+    height: 100%;
+    opacity: 25%;
+    background: url("../assets/coffee-beans-logo-and-footer.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.contact-card:before {
+    top: 20px;
+    left: -40px;
+}
+.contact-card:after {
+    bottom: 20px;
+    right: -40px;
+}
+.contact-card__address, .contact-card__working-hours, .contact-card__social {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+}
+.contact-card__title {margin-bottom: 1rem;}
+.contact-card__working-days {font-weight: 700;}

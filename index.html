@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./scss/landing.css">
+    <title>Coffee Shop - Home</title>
+</head>
+<body>
+    <header class="topbar">
+        <a class="topbar__logo-link" href="./index.html">
+            <img class="topbar__logo-icon" src="./assets/coffee-beans-logo-and-footer.svg" alt="Cofee bean logo">
+            <h1 class="topbar__logo-name">nitro</h1>
+        </a>
+        <nav class="topbar__main-navigation">
+            <ul class="topbar__main-navigation-items">
+                <li class="topbar__main-navigation-item"><a href="./index.html" class="topbar__main-navigation-link">ABOUT</a></li>
+                <li class="topbar__main-navigation-item topbar__main-navigation-item--spacer"><a href="./pages/menu.html" class="topbar__main-navigation-link">MENU</a></li>
+                <li class="topbar__main-navigation-item"><a href="./pages/menu.html" class="topbar__main-navigation-link topbar__main-navigation-link--attention">SHOP NOW</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero__item">
+                    <h1 class="hero__title">Nitro Coffee</h1>
+                    <p class="hero__description">Coffee is a brewed drink prepared from roasted coffee beans, the seeds of berries from certain coffea species.</p>
+                    <a href="./pages/menu.html" class="hero__action">SHOP NOW</a>    
+                </div>
+                <img class="hero__graphic" src="./assets/coffeebeans-hero.png" alt="Coffee Bag">    
+            </div>
+        </section>
+
+        <section class="products-card">
+            <div class="container">
+                <h1 class="products-card__main-title">Our Products</h1>
+
+                <article class="products-card__product">
+                    <img class="products-card__image" src="./assets/coffeebeans.png" alt="Coffee Beans">
+                    <div class="products-card__details">
+                        <div class="products-card__specs">
+                            <h2 class="products-card__title">Coffee Beans</h2>
+                            <span class="product-card__quantity">Pack of 3</span>    
+                        </div>
+                        <span class="products-card__price">$18.99</span>
+                    </div>
+                </article>
+
+                <article class="products-card__product products-card__product--spacer">
+                    <img class="products-card__image" src="./assets/coldbrew.png" alt="Cold Brew">
+                    <div class="products-card__details">
+                        <div class="products-card__specs">
+                            <h2 class="products-card__title">Cold Brew</h2>
+                            <span class="product-card__quantity">1 can</span>    
+                        </div>
+                        <span class="products-card__price">$4.99</span>
+                    </div>
+                </article>
+                <article class="products-card__product">
+                    <img class="products-card__image" src="./assets/inhousebrew.png" alt="In-house brew">
+                    <div class="products-card__details">
+                        <div class="products-card__specs">
+                            <h2 class="products-card__title">In-house Brew</h2>
+                            <span class="product-card__quantity">1 cup</span>    
+                        </div>
+                        <span class="products-card__price products-card__price--strong">$2.99</span>
+                    </div>
+                </article>
+                <a class="products-card__action" href="./pages/menu.html">VIEW ALL</a>
+            </div>
+        </section>
+
+        <section class="promotion-card">
+            <div class="container container--promotion-card">
+                <div class="promotion-card__details">
+                    <h1 class="promotion-card__main-title">We're Different</h1>
+                    <p class="promotion-card__description">We grow and roast our own beans. Every bean, every cup, every step of the way, we strive for excellence.</p>
+                    <div class="icon-pack">
+                        <img class="promotion-card__icon" src="./assets/planting.svg" alt="Coffe cup icon">
+                        <img class="promotion-card__icon" src="./assets/coffee-beans.svg" alt="Coffe cup icon">
+                        <img class="promotion-card__icon" src="./assets/coffee-cup.svg" alt="Coffe cup icon">
+                    </div>
+                    <a href="" class="promotion-card__action" href="#">LEARN MORE</a>    
+                </div>
+                <div class="promotion-card__graphic">
+                    <img class="promotion-card__imagery" src="./assets/tiltedcan.png" alt="Tilted empty can">
+                </div>
+                <span class="promotion-card__discount">Get 20% off your first order with code: FirstNitro</span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="contact-card">
+        <div class="container">
+            <section class="contact-card__address">
+                <h2 class="contact-card__title">Address</h2>
+                <p class="contact-card__description">
+                    503 Broadway Penthouse <br>
+                    New York
+                </p>    
+            </section>
+            <section class="contact-card__working-hours">
+                <h2 class="contact-card__title">Hours</h2>
+                <p class="contact-card__description">
+                    <span class="contact-card__working-days">Monday - Friday:</span> 9am - 7pm <br> 
+                    <span class="contact-card__working-days">Saturday - Sunday:</span> 10am - 5pm
+                </p>    
+            </section>
+            <section class="contact-card__social">
+                <h2 class="contact-card__title">Social</h2>
+                <a href="https://facebook.com/#"><img class="contact-card__social-icon" src="./assets/Facebook-Icon.svg" alt="facebook"></a>
+                <a href="https://yelp.com/#"><img class="contact-card__social-icon" src="./assets/Yelp-Icon.svg" alt="yelp"></a>
+                <a href="https://instagram.com/#"><img class="contact-card__social-icon" src="./assets/Instagram-Icon.svg" alt="instagram"></a>    
+            </section>    
+        </div>
+    </footer>
+</body>
+</html>

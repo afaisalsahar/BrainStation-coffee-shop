@@ -1,0 +1,138 @@
+/* ## Colors ## */
+$primary-color: #393939;
+$secondary-color: #FFFFFF;
+$alternate-color: #909090;
+$light-alternate-color: #F7F7F7;
+$highlight-color: #5BACC3;
+$spotlight-color: #FFF0ED;
+
+@mixin border-radius($top, $bottom) {
+    border-top-right-radius: $top;
+    border-top-left-radius: $top;
+    border-bottom-right-radius: $bottom;
+    border-bottom-left-radius: $bottom;
+}
+
+/* ## Reset ## */
+
+*,
+*:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open sans';
+    font-weight: 400;
+    color: $primary-color;
+}
+
+/* ## Default Element Styles ## */
+
+h1, h2, h3 { font-weight: 300; }
+h1 { font-size: 3.75rem; }
+h2 { font-size: 2.063rem; }
+p { font-size: 1.125rem; }
+a, button { font-size: 1.313rem;}
+a {
+    color: $primary-color;
+    text-decoration: none;
+}
+a:hover,
+a:active {
+    color: $highlight-color;
+}
+
+/* ## Website Container ## */
+
+.container {
+    width: 1280px;
+    margin: auto;
+}
+
+/* ## Icon Defaults ## */
+
+.topbar__logo-icon,
+.contact-card__social-icon,
+.promotion-card__icon {
+    min-width: 3.125rem;
+    max-width: 7.5rem;
+}
+
+/* ## Center Text Alignment ## */
+.products-card,
+.promotion-card,
+.promotion-card__discount,
+.menu-navigation__main-title,
+.menu-navigation__items,
+.menu-card {
+    text-align: center;
+}
+
+/* ## Topbar - Main Menu ## */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $spotlight-color;
+    padding: 1rem 2rem;
+}
+.topbar__logo-name {
+    display: inline;
+    font-size: 2.5em;
+}
+.topbar__logo-link:hover, .topbar__logo-link:active {
+    color: $primary-color;
+}
+.topbar__main-navigation-link--attention {
+    color: $highlight-color;
+}
+.topbar__main-navigation { margin-left: 2rem; }
+.topbar__main-navigation-items {
+    display: flex;
+    list-style: none;
+}
+.topbar__main-navigation-item--spacer { margin: 0 2rem; }
+
+/* ## Action Buttons ## */
+.hero__action,
+.products-card__action,
+.promotion-card__action {
+    text-align: center;
+    display: block;
+    position: relative;
+    min-width: 180px;
+    max-width: 220px;
+    padding: 1.25rem 0;
+    background: $highlight-color;
+    color: $secondary-color;
+}
+.hero__action:before,
+.products-card__action:before,
+.promotion-card__action:before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid $primary-color;
+}
+.hero__action:hover,
+.hero__action:active,
+.products-card__action:hover,
+.products-card__action:active,
+.promotion-card__action:hover,
+.promotion-card__action:active {
+    color: $secondary-color;
+}
+.products-card__action:active:before,
+.promotion-card__action:active:before,
+.hero__action:active:before {
+    bottom: 0;
+    right: 0;
+}
