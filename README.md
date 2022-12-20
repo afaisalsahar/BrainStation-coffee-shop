@@ -5,7 +5,7 @@ This project entails creating a basic functional multi-page static website for a
 BEM methodology is used for class names and Flexbox for layout. The layout is responsive and looks good at all dimensions.
 
 
-![Mockup]()
+![Mockup](https://raw.githubusercontent.com/afaisalsahar/BrainStation-coffee-shop/main/mockups/coffee-shop-landing-page-mockup.jpg)
 
 
 ## Functional Requirements
